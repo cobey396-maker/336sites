@@ -1,0 +1,146 @@
+@import "tailwindcss";
+
+/* ---------------------------------------------------------------------------
+   336 Sites — design tokens
+   Brand: deep teal (authority, trust) + mint (energy, accent).
+   Type: Plus Jakarta Sans across the board.
+   --------------------------------------------------------------------------- */
+@theme {
+  /* Brand — deep teal */
+  --color-teal-50: #eef6f5;
+  --color-teal-100: #d5e9e6;
+  --color-teal-200: #a9d3ce;
+  --color-teal-300: #6fb3ab;
+  --color-teal-400: #389086;
+  --color-teal-500: #14766c;
+  --color-teal-600: #0b5f57;
+  --color-teal-700: #084a44;
+  --color-teal-800: #063733;
+  --color-teal-900: #042523;
+  --color-teal-950: #021716;
+
+  /* Accent — mint */
+  --color-mint-50: #f0fdf8;
+  --color-mint-100: #defbf1;
+  --color-mint-200: #b9f6e4;
+  --color-mint-300: #8cefd3;
+  --color-mint-400: #5be3bf;
+  --color-mint-500: #34d3a9;
+  --color-mint-600: #17b78e;
+
+  /* Neutrals tuned to the teal hue so greys never read cold */
+  --color-ink: #0a1614;
+  --color-body: #3d4f4c;
+  --color-subtle: #6b807c;
+  --color-line: #e2eae8;
+  --color-surface: #f5f9f8;
+
+  /* Semantic aliases used throughout the UI */
+  --color-background: #ffffff;
+  --color-foreground: var(--color-ink);
+  --color-primary: var(--color-teal-700);
+  --color-primary-hover: var(--color-teal-600);
+  --color-on-primary: #ffffff;
+  --color-accent: var(--color-mint-500);
+  --color-on-accent: var(--color-teal-900);
+
+  --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", Roboto, sans-serif;
+
+  --radius-xs: 0.375rem;
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.25rem;
+  --radius-2xl: 1.75rem;
+
+  --shadow-soft: 0 1px 2px rgb(4 37 35 / 0.04), 0 8px 24px -12px rgb(4 37 35 / 0.14);
+  --shadow-lift: 0 2px 4px rgb(4 37 35 / 0.05), 0 18px 40px -18px rgb(4 37 35 / 0.22);
+
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-line);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-body);
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1, h2, h3, h4 {
+    color: var(--color-ink);
+    font-weight: 700;
+    letter-spacing: -0.022em;
+    line-height: 1.15;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  /* Always-visible, brand-coloured focus ring (never remove focus styles) */
+  :focus-visible {
+    outline: 2px solid var(--color-teal-600);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  ::selection {
+    background-color: var(--color-mint-200);
+    color: var(--color-teal-900);
+  }
+}
+
+@layer utilities {
+  .container-x {
+    width: 100%;
+    max-width: 76rem;
+    margin-inline: auto;
+    padding-inline: 1.25rem;
+  }
+
+  @media (min-width: 768px) {
+    .container-x { padding-inline: 2rem; }
+  }
+
+  /* Subtle entrance used on section headers and cards */
+  .reveal {
+    animation: reveal 0.7s var(--ease-out-soft) both;
+  }
+
+  .grid-lines {
+    background-image:
+      linear-gradient(to right, rgb(4 37 35 / 0.045) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(4 37 35 / 0.045) 1px, transparent 1px);
+    background-size: 72px 72px;
+  }
+}
+
+@keyframes reveal {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: none; }
+}
+
+/* Respect users who ask for less motion — no exceptions */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
