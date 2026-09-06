@@ -104,97 +104,52 @@ export type Project = {
   swatch: [string, string];
 };
 
-/** PLACEHOLDER portfolio — replace with real client work as you ship it. */
+/** PLACEHOLDER portfolio — replace the blurbs and results with real numbers. */
 export const projects: Project[] = [
   {
-    slug: "piedmont-plumbing",
-    name: "Piedmont Plumbing Co.",
-    industry: "Home services",
+    slug: "larrys-lawn-care",
+    name: "Larrys Lawn Care",
+    industry: "Lawn & landscaping",
     year: "2025",
     blurb:
-      "A dated three-page site replaced with a fast, service-area-driven build that puts the phone number in front of every visitor.",
-    scope: ["Website design", "Local SEO", "Call tracking"],
+      "Seasonal quote requests without the back-and-forth — a guided estimate form replaced a plain contact page, and the service-area pages do the rest.",
+    scope: ["Website design", "Quote builder", "Local SEO"],
     results: [
-      { label: "More calls", value: "+64%" },
+      { label: "Quote requests", value: "+112%" },
       { label: "Load time", value: "0.9s" },
       { label: "Turnaround", value: "16 days" },
     ],
     swatch: ["#084a44", "#34d3a9"],
   },
   {
-    slug: "elm-street-bakery",
-    name: "Elm Street Bakery",
-    industry: "Food & retail",
+    slug: "chris-cutz",
+    name: "Chris Cutz",
+    industry: "Barbershop",
     year: "2025",
     blurb:
-      "Online pre-orders for a downtown Greensboro bakery, with a menu the owner updates from her phone.",
-    scope: ["E-commerce", "Photography direction", "Training"],
+      "Chair time booked online instead of over DMs, with a cuts gallery the shop updates from a phone between clients.",
+    scope: ["Website design", "Online booking", "Photo direction"],
     results: [
-      { label: "Online orders", value: "180/mo" },
-      { label: "Avg. basket", value: "+$11" },
+      { label: "Online bookings", value: "180/mo" },
+      { label: "No-shows", value: "−34%" },
       { label: "Launch", value: "3 weeks" },
-    ],
-    swatch: ["#0b5f57", "#8cefd3"],
-  },
-  {
-    slug: "guilford-law",
-    name: "Guilford Law Group",
-    industry: "Professional services",
-    year: "2024",
-    blurb:
-      "A calm, credible presence for a two-attorney practice, with intake forms that route straight to the right paralegal.",
-    scope: ["Website design", "Intake automation", "Copywriting"],
-    results: [
-      { label: "Qualified leads", value: "2.3×" },
-      { label: "Intake time", value: "−40%" },
-      { label: "Pages", value: "12" },
     ],
     swatch: ["#042523", "#5be3bf"],
   },
   {
-    slug: "triad-turf",
-    name: "Triad Turf & Landscape",
-    industry: "Home services",
+    slug: "peters-powerwashing",
+    name: "Peters Powerwashing",
+    industry: "Exterior cleaning",
     year: "2024",
     blurb:
-      "Seasonal quote requests without the back-and-forth — a guided estimate form replaced a plain contact page.",
-    scope: ["Website design", "Quote builder", "Care plan"],
+      "A dated three-page site rebuilt around before-and-after work, with the phone number in front of every visitor on every screen size.",
+    scope: ["Website design", "Local SEO", "Call tracking"],
     results: [
-      { label: "Quote requests", value: "+112%" },
-      { label: "Bounce rate", value: "−28%" },
+      { label: "More calls", value: "+64%" },
+      { label: "Mobile score", value: "99/100" },
       { label: "Turnaround", value: "18 days" },
     ],
-    swatch: ["#063733", "#b9f6e4"],
-  },
-  {
-    slug: "battleground-fitness",
-    name: "Battleground Fitness",
-    industry: "Health & fitness",
-    year: "2024",
-    blurb:
-      "Class schedules, memberships and free-trial signups in one place, synced with the gym's booking system.",
-    scope: ["Website design", "Booking integration", "Local SEO"],
-    results: [
-      { label: "Trial signups", value: "+88%" },
-      { label: "Mobile score", value: "99/100" },
-      { label: "Launch", value: "4 weeks" },
-    ],
-    swatch: ["#14766c", "#defbf1"],
-  },
-  {
-    slug: "revolution-mill-studio",
-    name: "Revolution Mill Studio",
-    industry: "Creative studio",
-    year: "2023",
-    blurb:
-      "A gallery-first portfolio for a photography studio, built so new shoots go live in under a minute.",
-    scope: ["Website design", "CMS", "Performance"],
-    results: [
-      { label: "Inquiries", value: "+47%" },
-      { label: "Image weight", value: "−72%" },
-      { label: "Pages", value: "8" },
-    ],
-    swatch: ["#021716", "#34d3a9"],
+    swatch: ["#0b5f57", "#8cefd3"],
   },
 ];
 

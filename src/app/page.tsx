@@ -299,14 +299,14 @@ function Testimonial() {
             className="grid h-11 w-11 place-items-center rounded-full bg-teal-50 text-[0.8rem] font-bold text-teal-700"
             aria-hidden="true"
           >
-            DP
+            LL
           </span>
           <span className="text-left">
             <span className="block text-[0.95rem] font-semibold text-ink">
               Placeholder Name
             </span>
             <span className="block text-[0.85rem] text-subtle">
-              Owner, Piedmont Plumbing Co.
+              Owner, Larrys Lawn Care
             </span>
           </span>
         </figcaption>

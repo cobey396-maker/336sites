@@ -13,13 +13,7 @@ export const metadata: Metadata = {
     "Recent websites built by 336 Sites for home services, retail, professional services and creative businesses in Greensboro, NC.",
 };
 
-const industries = [
-  "Home services",
-  "Food & retail",
-  "Professional services",
-  "Health & fitness",
-  "Creative studios",
-];
+const industries = ["Lawn & landscaping", "Barbershop", "Exterior cleaning"];
 
 export default function PortfolioPage() {
   return (
@@ -42,7 +36,7 @@ export default function PortfolioPage() {
       </PageHero>
 
       <Section>
-        <ul className="grid gap-7 md:grid-cols-2">
+        <ul className="grid gap-7 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project) => (
             <li key={project.slug}>
               <ProjectCard project={project} />
