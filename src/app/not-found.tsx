@@ -3,7 +3,7 @@ import { ArrowRightIcon } from "@/components/Icons";
 
 export default function NotFound() {
   return (
-    <section className="bg-white py-24 md:py-32">
+    <section className="bg-background py-24 md:py-32">
       <div className="container-x text-center">
         <p className="text-[0.78rem] font-bold uppercase tracking-[0.18em] text-teal-600">
           404

@@ -8,12 +8,13 @@ export function Section({
 }: {
   children: ReactNode;
   className?: string;
-  tone?: "default" | "surface" | "dark";
+  tone?: "default" | "surface" | "mint" | "dark";
   id?: string;
 }) {
   const tones = {
-    default: "bg-white",
-    surface: "bg-surface",
+    default: "bg-background",
+    surface: "wash-band bg-surface",
+    mint: "wash-mint bg-background",
     dark: "bg-teal-900 text-teal-100",
   } as const;
 

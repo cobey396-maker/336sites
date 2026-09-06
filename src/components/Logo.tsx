@@ -68,7 +68,7 @@ export function Logo({
 export function ClientLogoPlaceholder({ label }: { label: string }) {
   return (
     <div
-      className="flex h-11 w-32 items-center justify-center rounded-md border border-dashed border-line bg-surface text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-subtle"
+      className="flex h-11 w-32 items-center justify-center rounded-md border border-dashed border-line bg-white/70 text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-subtle"
       title="Client logo placeholder"
     >
       {label}

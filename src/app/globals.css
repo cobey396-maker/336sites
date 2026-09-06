@@ -27,16 +27,22 @@
   --color-mint-400: #5be3bf;
   --color-mint-500: #34d3a9;
   --color-mint-600: #17b78e;
+  --color-mint-700: #0c7a5e;
 
   /* Neutrals tuned to the teal hue so greys never read cold */
   --color-ink: #0a1614;
   --color-body: #3d4f4c;
-  --color-subtle: #6b807c;
-  --color-line: #e2eae8;
-  --color-surface: #f5f9f8;
+  --color-subtle: #566b67;
+  --color-line: #d9e7e3;
+
+  /* Page surfaces, lightest to deepest. Cards stay pure white (--color-card)
+     so they lift off the tinted canvas instead of dissolving into it. */
+  --color-card: #ffffff;
+  --color-background: #f4faf7;
+  --color-surface: #e2efeb;
+  --color-tint: #e8f8f1;
 
   /* Semantic aliases used throughout the UI */
-  --color-background: #ffffff;
   --color-foreground: var(--color-ink);
   --color-primary: var(--color-teal-700);
   --color-primary-hover: var(--color-teal-600);
@@ -120,6 +126,36 @@
   /* Subtle entrance used on section headers and cards */
   .reveal {
     animation: reveal 0.7s var(--ease-out-soft) both;
+  }
+
+  /* Soft brand washes. Layered behind sections so the page reads as a tinted
+     canvas rather than a stack of white boxes. */
+  .wash-hero {
+    background-image:
+      radial-gradient(58rem 34rem at 88% -12%, rgb(52 211 169 / 0.20), transparent 62%),
+      radial-gradient(46rem 30rem at -8% 4%, rgb(8 74 68 / 0.07), transparent 60%);
+  }
+
+  .wash-top {
+    background-image:
+      radial-gradient(44rem 22rem at 78% -30%, rgb(52 211 169 / 0.16), transparent 65%),
+      linear-gradient(180deg, var(--color-tint) 0%, var(--color-surface) 100%);
+  }
+
+  .wash-band {
+    background-image: linear-gradient(
+      180deg,
+      var(--color-background) 0%,
+      var(--color-surface) 18%,
+      var(--color-surface) 82%,
+      var(--color-background) 100%
+    );
+  }
+
+  .wash-mint {
+    background-image:
+      radial-gradient(40rem 24rem at 12% 0%, rgb(52 211 169 / 0.14), transparent 62%),
+      linear-gradient(180deg, var(--color-tint) 0%, var(--color-background) 70%);
   }
 
   .grid-lines {

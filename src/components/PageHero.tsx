@@ -13,7 +13,7 @@ export function PageHero({
   children?: ReactNode;
 }) {
   return (
-    <section className="relative overflow-hidden border-b border-line bg-surface py-16 md:py-20">
+    <section className="wash-top relative overflow-hidden border-b border-line py-16 md:py-20">
       <div
         className="grid-lines pointer-events-none absolute inset-0 [mask-image:radial-gradient(ellipse_at_top,black,transparent_70%)]"
         aria-hidden="true"

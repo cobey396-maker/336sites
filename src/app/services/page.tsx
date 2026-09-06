@@ -82,7 +82,7 @@ export default function ServicesPage() {
                 key={item}
                 className="flex gap-3 rounded-lg border border-line bg-white p-5 text-[0.95rem]"
               >
-                <CheckIcon className="mt-0.5 h-4 w-4 shrink-0 text-mint-600" />
+                <CheckIcon className="mt-0.5 h-4 w-4 shrink-0 text-mint-700" />
                 {item}
               </li>
             ))}
@@ -90,7 +90,7 @@ export default function ServicesPage() {
         </div>
       </Section>
 
-      <Section>
+      <Section tone="mint">
         <SectionHeading
           eyebrow="Process"
           title="What working together looks like"
@@ -99,7 +99,7 @@ export default function ServicesPage() {
         <ol className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {processSteps.map((step) => (
             <li key={step.step} className="rounded-xl border border-line bg-white p-7">
-              <span className="text-[0.8rem] font-extrabold tracking-[0.16em] text-mint-600">
+              <span className="text-[0.8rem] font-extrabold tracking-[0.16em] text-mint-700">
                 {step.step}
               </span>
               <h3 className="mt-3 text-lg">{step.title}</h3>

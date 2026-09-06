@@ -43,8 +43,8 @@ export function Header() {
     <header
       className={`sticky top-0 z-50 border-b transition-colors duration-300 ${
         scrolled
-          ? "border-line bg-white/85 backdrop-blur-md"
-          : "border-transparent bg-white"
+          ? "border-line bg-background/80 backdrop-blur-md"
+          : "border-transparent bg-background"
       }`}
     >
       <a
@@ -110,7 +110,7 @@ export function Header() {
       <div
         id="mobile-nav"
         hidden={!open}
-        className="border-t border-line bg-white lg:hidden"
+        className="border-t border-line bg-background lg:hidden"
       >
         <nav aria-label="Mobile" className="container-x py-4">
           <ul className="flex flex-col">

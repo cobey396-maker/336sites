@@ -117,7 +117,7 @@ export default function PricingPage() {
         </div>
       </Section>
 
-      <Section>
+      <Section tone="mint">
         <SectionHeading
           eyebrow="Care plans"
           title="Keep it fast, safe and current"

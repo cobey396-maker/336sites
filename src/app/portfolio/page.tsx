@@ -77,7 +77,7 @@ export default function PortfolioPage() {
             },
           ].map((item) => (
             <li key={item.n} className="rounded-xl border border-line bg-white p-7">
-              <span className="text-[0.8rem] font-extrabold tracking-[0.16em] text-mint-600">
+              <span className="text-[0.8rem] font-extrabold tracking-[0.16em] text-mint-700">
                 {item.n}
               </span>
               <h3 className="mt-3 text-lg">{item.t}</h3>
@@ -87,8 +87,8 @@ export default function PortfolioPage() {
         </ol>
       </Section>
 
-      <Section>
-        <div className="rounded-2xl border border-dashed border-teal-200 bg-teal-50/50 px-7 py-12 text-center md:px-16">
+      <Section tone="mint">
+        <div className="rounded-2xl border border-dashed border-teal-200 bg-white/70 px-7 py-12 text-center md:px-16">
           <h2 className="text-[clamp(1.4rem,1.1rem+1.4vw,2rem)]">
             Want to see something closer to your industry?
           </h2>

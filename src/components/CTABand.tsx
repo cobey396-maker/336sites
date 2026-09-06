@@ -10,7 +10,7 @@ export function CTABand({
   lead?: string;
 }) {
   return (
-    <section className="bg-white py-18 md:py-24">
+    <section className="bg-background py-18 md:py-24">
       <div className="container-x">
         <div className="relative overflow-hidden rounded-2xl bg-teal-900 px-7 py-14 text-center md:px-16 md:py-20">
           <div

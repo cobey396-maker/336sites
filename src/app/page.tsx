@@ -10,7 +10,7 @@ import { site } from "@/lib/site";
 
 function Hero() {
   return (
-    <section className="relative overflow-hidden bg-white pt-14 pb-18 md:pt-20 md:pb-24">
+    <section className="wash-hero relative overflow-hidden pt-14 pb-18 md:pt-20 md:pb-24">
       <div
         className="grid-lines pointer-events-none absolute inset-0 [mask-image:radial-gradient(ellipse_at_top_right,black,transparent_65%)]"
         aria-hidden="true"
@@ -201,7 +201,7 @@ function Process() {
             key={step.step}
             className="relative rounded-xl border border-line bg-white p-7"
           >
-            <span className="text-[0.8rem] font-extrabold tracking-[0.16em] text-mint-600">
+            <span className="text-[0.8rem] font-extrabold tracking-[0.16em] text-mint-700">
               {step.step}
             </span>
             <h3 className="mt-3 text-lg">{step.title}</h3>
@@ -243,7 +243,7 @@ function WorkPreview() {
 
 function PricingPreview() {
   return (
-    <Section tone="surface">
+    <Section tone="mint">
       <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
         <SectionHeading
           eyebrow="Pricing"
@@ -282,7 +282,7 @@ function PricingPreview() {
 
 function Testimonial() {
   return (
-    <Section>
+    <Section tone="surface">
       <figure className="mx-auto max-w-3xl text-center">
         <span className="text-5xl leading-none text-mint-500" aria-hidden="true">
           &ldquo;
