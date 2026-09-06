@@ -16,10 +16,10 @@ function Hero() {
         aria-hidden="true"
       />
       <div className="container-x relative">
-        <div className="grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
+        <div className="grid items-center gap-14 xl:grid-cols-[1.22fr_0.78fr] xl:gap-14">
           <div className="reveal">
             <Eyebrow>Web design · Greensboro, NC</Eyebrow>
-            <h1 className="mt-5 text-[clamp(2.2rem,1.4rem+3.6vw,3.9rem)]">
+            <h1 className="mt-5 text-[clamp(2.2rem,1.5rem+3.1vw,3.55rem)]">
               Websites that make small businesses{" "}
               <span className="text-teal-700 [-webkit-box-decoration-break:clone] [box-decoration-break:clone] bg-[linear-gradient(to_top,rgb(140_239_211/0.55)_0,rgb(140_239_211/0.55)_0.16em,transparent_0.16em)]">
                 impossible to scroll past
@@ -76,7 +76,10 @@ function Hero() {
 /** Abstract, brand-coloured stand-in for a real site screenshot. */
 function HeroVisual() {
   return (
-    <div className="relative reveal [animation-delay:120ms]" aria-hidden="true">
+    <div
+      className="reveal relative mx-auto w-full max-w-xl [animation-delay:120ms] xl:max-w-none"
+      aria-hidden="true"
+    >
       <div className="relative rounded-2xl border border-line bg-white p-3 shadow-[var(--shadow-lift)]">
         <div className="flex items-center gap-1.5 px-2 pb-3 pt-1">
           <span className="h-2.5 w-2.5 rounded-full bg-line" />
