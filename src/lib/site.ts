@@ -10,9 +10,8 @@ export const site = {
   url: "https://336sites.com", // PLACEHOLDER — update if the domain differs
   location: "Greensboro, NC",
   serviceArea: "Greensboro, Winston-Salem, High Point & remote nationwide",
-  // PLACEHOLDER — replace with the real business line
-  phone: "(336) 555-0136",
-  phoneHref: "tel:+13365550136",
+  phone: "704-207-6894",
+  phoneHref: "tel:+17042076894",
   // PLACEHOLDER — replace with the real inbox
   email: "hello@336sites.com",
   hours: "Mon–Fri, 9am–6pm ET",

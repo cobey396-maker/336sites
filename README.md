@@ -56,9 +56,9 @@ Accessibility rules baked in: 44px minimum touch targets, visible focus rings,
 
 Everything below is a deliberate placeholder.
 
-1. **`src/lib/site.ts`** — phone number, email, social URLs and `url` (the live
-   domain). The phone number is used in the header, footer, contact page and
-   both CTA bands, so changing it in this one file updates the whole site.
+1. **`src/lib/site.ts`** — email, social URLs and `url` (the live domain). The
+   phone number here is real; everything is read from this one file, so the
+   header, footer, contact page and both CTA bands stay in sync.
 2. **Logo** — `src/components/Logo.tsx` (`LogoMark`) and `src/app/icon.svg`
    both hold a simple placeholder mark.
 3. **Portfolio** — `projects` in `src/lib/content.ts`. Names, blurbs and
