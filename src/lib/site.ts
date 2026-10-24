@@ -12,8 +12,7 @@ export const site = {
   serviceArea: "Greensboro, Winston-Salem, High Point & remote nationwide",
   phone: "704-207-6894",
   phoneHref: "tel:+17042076894",
-  // PLACEHOLDER — replace with the real inbox
-  email: "hello@336sites.com",
+  email: "Cobey@336sites.com",
   hours: "Mon–Fri, 9am–6pm ET",
   responseTime: "Replies within one business day",
   social: {

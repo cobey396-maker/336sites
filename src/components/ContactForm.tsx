@@ -6,20 +6,16 @@ import { ArrowRightIcon, MailIcon } from "@/components/Icons";
 import { site } from "@/lib/site";
 
 /**
- * No backend yet, by design.
- *
- * The form validates in the browser and then hands a pre-filled message to the
- * visitor's email client. To switch to a hosted form service later, set
- * FORM_ENDPOINT to e.g. "https://formspree.io/f/xxxxxxx" — the submit handler
- * will POST to it instead and the mailto fallback stops being used.
+ * Submissions go to Formspree, which emails them on. Clear FORM_ENDPOINT to
+ * fall back to opening the visitor's email client with a pre-filled message.
  */
-const FORM_ENDPOINT = "";
+const FORM_ENDPOINT = "https://formspree.io/f/xoeqjzyk";
 
 const budgets = [
-  "Under $1,500",
-  "$1,500 – $3,000",
-  "$3,000 – $6,000",
-  "$6,000+",
+  "Under $300",
+  "$300 – $600",
+  "$600 – $900",
+  "$900+",
   "Not sure yet",
 ];
 
@@ -51,6 +47,7 @@ export function ContactForm() {
 
     if (FORM_ENDPOINT) {
       setStatus("sending");
+      data.set("_subject", `Website enquiry — ${get("business") || get("name")}`);
       try {
         const response = await fetch(FORM_ENDPOINT, {
           method: "POST",
@@ -196,6 +193,16 @@ export function ContactForm() {
           className={`${fieldClass} mt-2 min-h-36 resize-y py-3 leading-relaxed`}
         />
       </div>
+
+      {/* Honeypot: hidden from people; Formspree drops submissions that fill it. */}
+      <input
+        type="text"
+        name="_gotcha"
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+        className="absolute -left-[10000px] h-px w-px"
+      />
 
       <div className="flex flex-wrap items-center gap-4">
         <Button type="submit" size="lg" disabled={status === "sending"}>

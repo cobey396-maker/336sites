@@ -65,8 +65,10 @@ Everything below is a deliberate placeholder.
    results are invented. The thumbnails are generated placeholders; swap
    `Thumbnail` in `src/components/ProjectCard.tsx` for `next/image`
    screenshots when you have them.
-4. **Pricing** — `tiers` and `carePlans` in `src/lib/content.ts`, plus
-   `comparisonRows` in `src/app/pricing/page.tsx`.
+4. **Pricing** (real: $200 / $500 / $800, $100/mo hosting) — when it changes,
+   update `tiers` and `carePlans` in `src/lib/content.ts`, `comparisonRows`
+   and the meta description in `src/app/pricing/page.tsx`, and the `budgets`
+   in `src/components/ContactForm.tsx`.
 5. **Testimonial** — the quote on the home page (`Testimonial` in
    `src/app/page.tsx`) is marked as a placeholder on the page itself.
 6. **Client logos** — the "Trusted by" strip on the home page uses
@@ -74,13 +76,10 @@ Everything below is a deliberate placeholder.
 
 ## Contact form
 
-There is no backend yet. The form validates in the browser and then opens the
+Submissions POST to Formspree (`FORM_ENDPOINT` at the top of
+`src/components/ContactForm.tsx`), which emails them on. A hidden `_gotcha`
+field catches bots. Clear `FORM_ENDPOINT` to fall back to opening the
 visitor's email client with the message pre-filled.
-
-To switch to a hosted form service, set `FORM_ENDPOINT` at the top of
-`src/components/ContactForm.tsx` (e.g. a Formspree URL). The submit handler
-already POSTs the `FormData` there and shows success/error states — no other
-changes needed.
 
 ## Deploying
 

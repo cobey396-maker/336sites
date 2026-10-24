@@ -10,19 +10,20 @@ import { carePlans, tiers } from "@/lib/content";
 export const metadata: Metadata = {
   title: "Pricing",
   description:
-    "Transparent website pricing from 336 Sites: one-time build packages from $1,200 and monthly care plans from $49. No hidden fees, no long-term contracts.",
+    "Website pricing from 336 Sites, by the page: $200 for 1–2 pages, $500 for 3–5, $800 for 6–8. Hosting & maintenance is $100/month. No hidden fees, no long-term contracts.",
 };
 
 const comparisonRows: { label: string; values: [string, string, string] }[] = [
-  { label: "Pages", values: ["1", "Up to 6", "Unlimited"] },
+  { label: "Pages", values: ["1–2", "3–5", "6–8"] },
   { label: "Custom design", values: ["Yes", "Yes", "Yes"] },
-  { label: "Copywriting", values: ["Headlines only", "Every page", "Every page"] },
-  { label: "Local SEO setup", values: ["Basic", "Full", "Full"] },
-  { label: "Online store / booking", values: ["—", "—", "Included"] },
-  { label: "Edit it yourself (CMS)", values: ["—", "Optional", "Included"] },
-  { label: "Revisions", values: ["1 round", "2 rounds", "Unlimited"] },
-  { label: "Post-launch support", values: ["14 days", "30 days", "90 days"] },
-  { label: "Typical timeline", values: ["~2 weeks", "~3 weeks", "4–6 weeks"] },
+  { label: "Mobile and tablet layouts", values: ["Yes", "Yes", "Yes"] },
+  { label: "Contact form to your inbox", values: ["Yes", "Yes", "Yes"] },
+  { label: "Local search setup", values: ["$150 add-on", "Included", "Included"] },
+  { label: "Booking or quote flow", values: ["$75 add-on", "$75 add-on", "Included"] },
+  { label: "Copywriting", values: ["$50/page", "$50/page", "3 pages included"] },
+  { label: "Revisions", values: ["2 rounds", "2 rounds", "2 rounds"] },
+  { label: "Free fixes after launch", values: ["2 months", "2 months", "2 months"] },
+  { label: "Typical timeline", values: ["~2 weeks", "~2 weeks", "~2 weeks"] },
 ];
 
 export default function PricingPage() {
@@ -54,8 +55,8 @@ export default function PricingPage() {
           ))}
         </ul>
         <p className="mt-8 text-center text-[0.9rem] text-subtle">
-          Prices shown are placeholders — set your own before launch. Domain
-          registration (~$15/yr) is billed to you directly so you always own it.
+          Domain registration (~$15/yr) is billed to you directly so you always
+          own it.
         </p>
       </Section>
 
@@ -68,7 +69,7 @@ export default function PricingPage() {
         <div className="mt-12 overflow-x-auto rounded-xl border border-line bg-white">
           <table className="w-full min-w-[36rem] border-collapse text-left">
             <caption className="sr-only">
-              Feature comparison of the Starter, Business and Premium website packages
+              Feature comparison of the Starter, Business and Pro website packages
             </caption>
             <thead>
               <tr className="border-b border-line">
@@ -124,7 +125,7 @@ export default function PricingPage() {
           lead="Optional monthly plans that cover hosting, security and the small edits you would otherwise put off. Cancel any time."
           align="center"
         />
-        <ul className="mt-12 grid gap-5 md:grid-cols-3">
+        <ul className="mx-auto mt-12 grid max-w-4xl gap-5 md:grid-cols-2">
           {carePlans.map((plan) => (
             <li key={plan.name}>
               <CarePlanCard plan={plan} />
@@ -132,8 +133,8 @@ export default function PricingPage() {
           ))}
         </ul>
         <p className="mt-8 text-center text-[0.9rem] text-subtle">
-          Not on a plan? Hosting runs roughly $10–25/month wherever you like, and
-          edits are billed at an hourly rate.
+          Not on a plan? Fixes are free for two months after launch, then $50
+          each.
         </p>
       </Section>
 

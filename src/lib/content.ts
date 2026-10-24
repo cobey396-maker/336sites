@@ -108,7 +108,7 @@ export type Project = {
 export const projects: Project[] = [
   {
     slug: "larrys-lawn-care",
-    name: "Larrys Lawn Care",
+    name: "Larry's Lawn Care",
     industry: "Lawn & landscaping",
     year: "2025",
     blurb:
@@ -164,62 +164,55 @@ export type Tier = {
   featured?: boolean;
 };
 
-/** PLACEHOLDER pricing — set your own numbers before launch. */
+/** Priced by the page. */
 export const tiers: Tier[] = [
   {
     slug: "starter",
     name: "Starter",
-    price: "$1,200",
-    cadence: "one-time",
-    bestFor: "New businesses that need to exist online",
-    summary:
-      "A sharp one-page site that covers who you are, what you do and how to reach you.",
+    price: "$200",
+    cadence: "one-time · 1–2 pages",
+    bestFor: "New businesses",
+    summary: "A home page and one more — enough to be found and called.",
     features: [
-      "One-page custom design",
-      "Mobile and tablet optimised",
-      "Contact form + click-to-call",
-      "Google Business Profile setup",
-      "Basic on-page SEO",
-      "1 round of revisions",
-      "Live in about 2 weeks",
+      "Home page plus one other",
+      "Mobile and tablet layouts",
+      "Contact form to your inbox",
+      "Google Business linked",
+      "Two rounds of revisions",
+      "Two months of free fixes",
     ],
   },
   {
     slug: "business",
     name: "Business",
-    price: "$2,900",
-    cadence: "one-time",
-    bestFor: "Established shops that want the phone ringing",
-    summary:
-      "A full multi-page site built around the services you actually want to sell.",
+    price: "$500",
+    cadence: "one-time · 3–5 pages",
+    bestFor: "Established local businesses",
+    summary: "Home, services, about and contact. What most businesses need.",
     features: [
-      "Up to 6 custom pages",
-      "Copywriting for every page",
-      "Service and location pages for local SEO",
-      "Photo sourcing and editing",
-      "Analytics + conversion tracking",
-      "2 rounds of revisions",
-      "30 days of post-launch support",
-      "Live in about 3 weeks",
+      "Everything in Starter",
+      "Services and about pages",
+      "Local search setup included",
+      "Photo gallery or reviews section",
+      "Two rounds of revisions",
+      "Two months of free fixes",
     ],
     featured: true,
   },
   {
-    slug: "premium",
-    name: "Premium",
-    price: "$5,500+",
-    cadence: "starting at",
-    bestFor: "Stores, bookings and anything custom",
-    summary:
-      "Everything in Business plus the moving parts — payments, scheduling, integrations.",
+    slug: "pro",
+    name: "Pro",
+    price: "$800",
+    cadence: "one-time · 6–8 pages",
+    bestFor: "Multi-service businesses",
+    summary: "A page per service or location, plus booking or quote flows.",
     features: [
-      "Unlimited pages",
-      "Online store or booking system",
-      "Payment processing setup",
-      "CMS so you can edit anything",
-      "Custom integrations (CRM, email, POS)",
-      "Unlimited revisions during build",
-      "90 days of post-launch support",
+      "Everything in Business",
+      "A page per service or location",
+      "Booking or quote request flow",
+      "Copywriting for three pages",
+      "Analytics dashboard set up",
+      "Two months of free fixes",
     ],
   },
 ];
@@ -234,37 +227,25 @@ export type CarePlan = {
 
 export const carePlans: CarePlan[] = [
   {
-    name: "Essential",
-    price: "$49",
-    summary: "Keep the lights on and the site safe.",
+    name: "Hosting & maintenance",
+    price: "$100",
+    summary: "Hosting, backups, updates and small content changes handled for you.",
     features: [
       "Managed hosting + SSL",
-      "Weekly off-site backups",
-      "Security updates",
-      "Uptime monitoring",
-    ],
-  },
-  {
-    name: "Growth",
-    price: "$99",
-    summary: "Everything in Essential, plus a set of hands each month.",
-    features: [
-      "Everything in Essential",
-      "Up to 1 hour of content edits",
-      "Monthly performance report",
-      "Priority email support",
+      "Backups and updates",
+      "Small content edits",
+      "Fixes covered after the free two months",
     ],
     featured: true,
   },
   {
-    name: "Partner",
-    price: "$199",
-    summary: "An ongoing web person without the salary.",
+    name: "Analytics reports",
+    price: "$40",
+    summary: "A short monthly email: visits, calls, forms, and what to do about it.",
     features: [
-      "Everything in Growth",
-      "Up to 3 hours of edits or new pages",
-      "Quarterly SEO review",
-      "Same-day response window",
+      "Monthly traffic summary",
+      "Calls and form submissions",
+      "Plain-English recommendations",
     ],
   },
 ];
@@ -295,7 +276,7 @@ export const processSteps = [
 export const faqs = [
   {
     q: "How long does a website take?",
-    a: "Most Starter sites go live in about two weeks and Business sites in about three, measured from the day I have your content. Premium builds with stores or booking systems usually run four to six weeks.",
+    a: "Most builds go live about two weeks after I have your content. A single landing page can take just a few days.",
   },
   {
     q: "Do I own the site when it is done?",
@@ -307,7 +288,7 @@ export const faqs = [
   },
   {
     q: "Are there hidden fees?",
-    a: "No. The quote covers design and build. The only ongoing costs are your domain (about $15/year) and hosting, which is included if you are on a care plan and runs roughly $10–25/month if you are not.",
+    a: "No. The quote covers design and build. The only ongoing costs are your domain (about $15/year) and hosting, which is included in the $100/month hosting & maintenance plan. Fixes are free for two months after launch, then $50 each.",
   },
   {
     q: "Can you work with businesses outside Greensboro?",
