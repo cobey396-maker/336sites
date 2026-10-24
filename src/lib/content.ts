@@ -99,12 +99,11 @@ export type Project = {
   year: string;
   blurb: string;
   scope: string[];
-  results: { label: string; value: string }[];
   /** Two brand colours used for the placeholder artwork until real shots exist. */
   swatch: [string, string];
 };
 
-/** PLACEHOLDER portfolio — replace the blurbs and results with real numbers. */
+/** Real clients. Add results here only once they are measured. */
 export const projects: Project[] = [
   {
     slug: "larrys-lawn-care",
@@ -114,11 +113,6 @@ export const projects: Project[] = [
     blurb:
       "Seasonal quote requests without the back-and-forth — a guided estimate form replaced a plain contact page, and the service-area pages do the rest.",
     scope: ["Website design", "Quote builder", "Local SEO"],
-    results: [
-      { label: "Quote requests", value: "+112%" },
-      { label: "Load time", value: "0.9s" },
-      { label: "Turnaround", value: "16 days" },
-    ],
     swatch: ["#084a44", "#34d3a9"],
   },
   {
@@ -129,11 +123,6 @@ export const projects: Project[] = [
     blurb:
       "Chair time booked online instead of over DMs, with a cuts gallery the shop updates from a phone between clients.",
     scope: ["Website design", "Online booking", "Photo direction"],
-    results: [
-      { label: "Online bookings", value: "180/mo" },
-      { label: "No-shows", value: "−34%" },
-      { label: "Launch", value: "3 weeks" },
-    ],
     swatch: ["#042523", "#5be3bf"],
   },
   {
@@ -144,11 +133,6 @@ export const projects: Project[] = [
     blurb:
       "A dated three-page site rebuilt around before-and-after work, with the phone number in front of every visitor on every screen size.",
     scope: ["Website design", "Local SEO", "Call tracking"],
-    results: [
-      { label: "More calls", value: "+64%" },
-      { label: "Mobile score", value: "99/100" },
-      { label: "Turnaround", value: "18 days" },
-    ],
     swatch: ["#0b5f57", "#8cefd3"],
   },
 ];

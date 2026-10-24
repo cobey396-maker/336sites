@@ -223,7 +223,7 @@ function WorkPreview() {
         <SectionHeading
           eyebrow="Recent work"
           title="Sites doing real work for real businesses"
-          lead="A few recent builds. Every project ships with analytics, so the results below are measured, not guessed."
+          lead="A few recent builds for small businesses around the Triad."
         />
         <Link
           href="/portfolio"

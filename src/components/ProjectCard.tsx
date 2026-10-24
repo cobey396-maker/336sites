@@ -64,19 +64,6 @@ export function ProjectCard({ project }: { project: Project }) {
             </li>
           ))}
         </ul>
-
-        <dl className="mt-auto grid grid-cols-3 gap-3 border-t border-line pt-6">
-          {project.results.map((result) => (
-            // Value first visually so the numbers stay aligned across the row
-            // however many lines a label wraps to; dt still precedes dd in the DOM.
-            <div key={result.label} className="flex flex-col">
-              <dt className="order-2 mt-1 text-[0.72rem] font-semibold uppercase tracking-[0.1em] text-subtle">
-                {result.label}
-              </dt>
-              <dd className="text-lg font-extrabold text-ink">{result.value}</dd>
-            </div>
-          ))}
-        </dl>
       </div>
     </article>
   );

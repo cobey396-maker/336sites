@@ -20,8 +20,8 @@ export default function PortfolioPage() {
     <>
       <PageHero
         eyebrow="Portfolio"
-        title="Recent work, with the numbers attached"
-        lead="Every build ships with analytics, so these are measured outcomes rather than adjectives. Screenshots and results below are placeholders until the real assets are dropped in."
+        title="Recent work for local businesses"
+        lead="A few recent builds for small businesses around the Triad."
       >
         <ul className="flex flex-wrap gap-2">
           {industries.map((industry) => (
