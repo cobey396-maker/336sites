@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { site } from "@/lib/site";
+import { HollySprig } from "@/components/holiday/Decorations";
 
 /**
  * PLACEHOLDER LOGO.
@@ -43,7 +44,12 @@ export function Logo({
       className={`group inline-flex items-center gap-2.5 ${className}`}
       aria-label={`${site.name} — home`}
     >
-      <LogoMark className="h-9 w-9 transition-transform duration-300 group-hover:-translate-y-0.5" />
+      <span className="relative">
+        <LogoMark className="h-9 w-9 transition-transform duration-300 group-hover:-translate-y-0.5" />
+        {site.holiday ? (
+          <HollySprig className="pointer-events-none absolute -right-2 -top-2 h-4 w-5 -rotate-12 drop-shadow-sm" />
+        ) : null}
+      </span>
       <span className="flex flex-col leading-none">
         <span
           className={`text-[1.05rem] font-extrabold tracking-tight ${

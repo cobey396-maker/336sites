@@ -7,6 +7,7 @@ import { Eyebrow, Section, SectionHeading } from "@/components/Section";
 import { ArrowRightIcon, CheckIcon, serviceIcons } from "@/components/Icons";
 import { processSteps, projects, services, stats, tiers } from "@/lib/content";
 import { site } from "@/lib/site";
+import { SnowCap, Snowflake } from "@/components/holiday/Decorations";
 
 function Hero() {
   return (
@@ -18,7 +19,12 @@ function Hero() {
       <div className="container-x relative">
         <div className="grid items-center gap-14 xl:grid-cols-[1.22fr_0.78fr] xl:gap-14">
           <div className="reveal">
-            <Eyebrow>Web design · Greensboro, NC</Eyebrow>
+            <Eyebrow>
+              {site.holiday ? (
+                <Snowflake className="h-3.5 w-3.5 text-mint-500" />
+              ) : null}
+              Web design · Greensboro, NC
+            </Eyebrow>
             <h1 className="mt-5 text-[clamp(2.2rem,1.5rem+3.1vw,3.55rem)]">
               Websites that make small businesses{" "}
               <span className="text-teal-700 [-webkit-box-decoration-break:clone] [box-decoration-break:clone] bg-[linear-gradient(to_top,rgb(140_239_211/0.55)_0,rgb(140_239_211/0.55)_0.16em,transparent_0.16em)]">
@@ -81,6 +87,9 @@ function HeroVisual() {
       aria-hidden="true"
     >
       <div className="relative rounded-2xl border border-line bg-white p-3 shadow-[var(--shadow-lift)]">
+        {site.holiday ? (
+          <SnowCap className="pointer-events-none absolute inset-x-2 -top-2 h-4 w-[calc(100%-1rem)]" />
+        ) : null}
         <div className="flex items-center gap-1.5 px-2 pb-3 pt-1">
           <span className="h-2.5 w-2.5 rounded-full bg-line" />
           <span className="h-2.5 w-2.5 rounded-full bg-line" />

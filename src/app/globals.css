@@ -50,6 +50,15 @@
   --color-accent: var(--color-mint-500);
   --color-on-accent: var(--color-teal-900);
 
+  /* Seasonal decoration only — never used for brand UI or body text.
+     Deep teal already reads as evergreen, so the holiday layer only adds
+     berry, warm bulb-gold and snow on top of it. */
+  --color-berry: #b4232e;
+  --color-berry-deep: #8c1b24;
+  --color-gold: #e8b65a;
+  --color-gold-glow: #ffd98a;
+  --color-snow: #ffffff;
+
   --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, -apple-system,
     "Segoe UI", Roboto, sans-serif;
 
@@ -179,4 +188,36 @@
     animation-iteration-count: 1 !important;
     transition-duration: 0.001ms !important;
   }
+}
+
+/* ---------------------------------------------------------------------------
+   Holiday layer. Everything here is decorative: aria-hidden in the markup and
+   pointer-events:none, so it never intercepts a click or reaches a screen
+   reader. Remove by setting `holiday: false` in src/lib/site.ts.
+   --------------------------------------------------------------------------- */
+@layer utilities {
+  .snowfall {
+    position: fixed;
+    inset: 0;
+    z-index: 40;
+    pointer-events: none;
+  }
+
+  .twinkle {
+    animation: twinkle 3.2s ease-in-out infinite;
+  }
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.45; }
+}
+
+@keyframes sway {
+  0%, 100% { transform: rotate(-2.5deg); }
+  50% { transform: rotate(2.5deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .twinkle { animation: none; opacity: 0.92; }
 }

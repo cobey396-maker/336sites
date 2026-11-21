@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { Snowfall } from "@/components/holiday/Snowfall";
 import { site } from "@/lib/site";
 import "./globals.css";
 
@@ -78,6 +79,7 @@ export default function RootLayout({
           // Static, developer-authored JSON-LD — no user input reaches this string.
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        {site.holiday ? <Snowfall /> : null}
         <Header />
         <main id="main">{children}</main>
         <Footer />

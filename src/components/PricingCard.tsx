@@ -1,6 +1,8 @@
 import { ButtonLink } from "@/components/Button";
 import { CheckIcon } from "@/components/Icons";
 import type { CarePlan, Tier } from "@/lib/content";
+import { site } from "@/lib/site";
+import { SnowCap } from "@/components/holiday/Decorations";
 
 export function TierCard({ tier }: { tier: Tier }) {
   const featured = Boolean(tier.featured);
@@ -13,6 +15,16 @@ export function TierCard({ tier }: { tier: Tier }) {
           : "border-line bg-white hover:-translate-y-1 hover:shadow-[var(--shadow-soft)]"
       }`}
     >
+      {featured && site.holiday ? (
+        // Clip on a wrapper, not the card, so the badge above the card survives.
+        <span
+          className="pointer-events-none absolute inset-x-0 -top-px h-4 overflow-hidden rounded-t-xl"
+          aria-hidden="true"
+        >
+          <SnowCap className="h-full w-full" />
+        </span>
+      ) : null}
+
       {featured ? (
         <span className="absolute -top-3 left-7 rounded-full bg-mint-400 px-3 py-1 text-[0.68rem] font-bold uppercase tracking-[0.14em] text-teal-900 md:left-8">
           Most popular

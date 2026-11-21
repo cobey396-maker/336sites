@@ -10,6 +10,7 @@ import {
 } from "@/components/Icons";
 import { nav, site } from "@/lib/site";
 import { services } from "@/lib/content";
+import { HollySprig, SnowCap } from "@/components/holiday/Decorations";
 
 const socials = [
   { href: site.social.instagram, label: "Instagram", Icon: InstagramIcon },
@@ -19,7 +20,10 @@ const socials = [
 
 export function Footer() {
   return (
-    <footer className="bg-teal-900 text-teal-100">
+    <footer className="relative bg-teal-900 text-teal-100">
+      {site.holiday ? (
+        <SnowCap className="pointer-events-none absolute inset-x-0 -top-px h-4 w-full md:h-5" />
+      ) : null}
       <div className="container-x py-16">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
           <div>
@@ -113,7 +117,14 @@ export function Footer() {
           <p>
             © {new Date().getFullYear()} {site.name}. All rights reserved.
           </p>
-          <p>Designed &amp; built in {site.location}.</p>
+          <p className="flex items-center gap-2">
+            {site.holiday ? (
+              <HollySprig className="h-3.5 w-4.5 shrink-0" />
+            ) : null}
+            {site.holiday
+              ? `Happy holidays from ${site.location}.`
+              : `Designed & built in ${site.location}.`}
+          </p>
         </div>
       </div>
     </footer>

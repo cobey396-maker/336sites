@@ -1,6 +1,7 @@
 import { ButtonLink } from "@/components/Button";
 import { ArrowRightIcon, PhoneIcon } from "@/components/Icons";
 import { site } from "@/lib/site";
+import { Ornament } from "@/components/holiday/Decorations";
 
 export function CTABand({
   title = "Ready for a site that actually earns its keep?",
@@ -21,6 +22,25 @@ export function CTABand({
             className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-mint-500/20 blur-3xl"
             aria-hidden="true"
           />
+          {site.holiday ? (
+            <div className="pointer-events-none absolute inset-x-0 top-0" aria-hidden="true">
+              <Ornament
+                color="var(--color-berry)"
+                drop={46}
+                className="absolute left-[8%] top-0 h-24 w-6 origin-top md:left-[12%]"
+              />
+              <Ornament
+                color="var(--color-mint-400)"
+                drop={74}
+                className="absolute left-[21%] top-0 hidden h-28 w-6 origin-top sm:block md:left-[24%]"
+              />
+              <Ornament
+                color="var(--color-gold)"
+                drop={54}
+                className="absolute right-[9%] top-0 h-24 w-6 origin-top md:right-[14%]"
+              />
+            </div>
+          ) : null}
           <div className="relative mx-auto max-w-2xl">
             <h2 className="text-[clamp(1.6rem,1.1rem+2.2vw,2.5rem)] text-white">
               {title}

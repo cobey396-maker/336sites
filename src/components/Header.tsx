@@ -7,6 +7,7 @@ import { Logo } from "@/components/Logo";
 import { ButtonLink } from "@/components/Button";
 import { CloseIcon, MenuIcon, PhoneIcon } from "@/components/Icons";
 import { nav, site } from "@/lib/site";
+import { StringLights } from "@/components/holiday/Decorations";
 
 export function Header() {
   const pathname = usePathname();
@@ -105,6 +106,10 @@ export function Header() {
           {open ? <CloseIcon className="h-5 w-5" /> : <MenuIcon className="h-5 w-5" />}
         </button>
       </div>
+
+      {site.holiday ? (
+        <StringLights className="pointer-events-none absolute inset-x-0 top-full h-9 w-full md:h-11" />
+      ) : null}
 
       {/* Mobile navigation */}
       <div

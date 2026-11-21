@@ -15,6 +15,8 @@ export const site = {
   email: "Cobey@336sites.com",
   hours: "Mon–Fri, 9am–6pm ET",
   responseTime: "Replies within one business day",
+  /** Seasonal decoration across the site. Set false to pack it all away. */
+  holiday: true,
   social: {
     // PLACEHOLDER — delete any you do not use
     instagram: "https://instagram.com/336sites",
