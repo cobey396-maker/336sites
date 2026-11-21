@@ -1,12 +1,27 @@
+import Image from "next/image";
 import { ArrowRightIcon } from "@/components/Icons";
 import type { Project } from "@/lib/content";
 
 /**
- * Placeholder artwork: a stylised browser frame filled with the project's
- * brand swatch. Drop a real <Image> in here once screenshots exist.
+ * A real screenshot when the project has one, otherwise generated artwork:
+ * a stylised browser frame filled with the project's brand swatch.
  */
 function Thumbnail({ project }: { project: Project }) {
   const [dark, light] = project.swatch;
+
+  if (project.image) {
+    return (
+      <div className="relative aspect-16/10 w-full overflow-hidden rounded-lg bg-surface">
+        <Image
+          src={project.image}
+          alt={`${project.name} website, ${project.imageAlt ?? "home page"}`}
+          fill
+          sizes="(min-width: 1024px) 30vw, (min-width: 768px) 45vw, 92vw"
+          className="object-cover object-top transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.03]"
+        />
+      </div>
+    );
+  }
 
   return (
     <div

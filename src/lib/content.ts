@@ -99,8 +99,12 @@ export type Project = {
   year: string;
   blurb: string;
   scope: string[];
-  /** Two brand colours used for the placeholder artwork until real shots exist. */
+  /** Two brand colours used for the generated artwork when there is no shot. */
   swatch: [string, string];
+  /** Real screenshot in /public. Omit to fall back to generated artwork. */
+  image?: string;
+  /** What the screenshot shows, for the alt text. */
+  imageAlt?: string;
 };
 
 /** Real clients. Add results here only once they are measured. */
@@ -111,9 +115,11 @@ export const projects: Project[] = [
     industry: "Lawn & landscaping",
     year: "2025",
     blurb:
-      "Seasonal quote requests without the back-and-forth — a guided estimate form replaced a plain contact page, and the service-area pages do the rest.",
+      "A call-first site for a small crew that keeps yards, gardens, fences and decks in order across the Piedmont — free estimates booked in person, not through a form maze.",
     scope: ["Website design", "Quote builder", "Local SEO"],
     swatch: ["#084a44", "#34d3a9"],
+    image: "/portfolio/larrys-lawn-care.webp",
+    imageAlt: "home page hero",
   },
   {
     slug: "chris-cutz",
@@ -121,9 +127,11 @@ export const projects: Project[] = [
     industry: "Barbershop",
     year: "2025",
     blurb:
-      "Chair time booked online instead of over DMs, with a cuts gallery the shop updates from a phone between clients.",
+      "An appointment-only barber with a flat price board and no upsell — every service line on the page starts a booking at that length.",
     scope: ["Website design", "Online booking", "Photo direction"],
     swatch: ["#042523", "#5be3bf"],
+    image: "/portfolio/chris-cutz.webp",
+    imageAlt: "services and prices",
   },
   {
     slug: "peters-powerwashing",
