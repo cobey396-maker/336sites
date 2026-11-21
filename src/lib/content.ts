@@ -297,7 +297,7 @@ export const faqs = [
 ];
 
 export const stats = [
-  { value: "2–3 wks", label: "Typical launch time" },
+  { value: "1 week", label: "Typical launch time" },
   { value: "100%", label: "Custom, no templates" },
   { value: "336", label: "Local to the Triad" },
   { value: "0", label: "Long-term contracts" },

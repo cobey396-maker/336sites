@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { ButtonLink } from "@/components/Button";
 import { CTABand } from "@/components/CTABand";
-import { ClientLogoPlaceholder } from "@/components/Logo";
 import { ProjectCardCompact } from "@/components/ProjectCard";
 import { Eyebrow, Section, SectionHeading } from "@/components/Section";
 import { ArrowRightIcon, CheckIcon, serviceIcons } from "@/components/Icons";
@@ -48,7 +47,7 @@ function Hero() {
             </div>
 
             <ul className="mt-9 flex flex-wrap gap-x-6 gap-y-2.5 text-[0.92rem] font-medium">
-              {["Fixed price, quoted upfront", "Live in 2–3 weeks", "You own everything"].map(
+              {["Fixed price, quoted upfront", "Live in about a week", "You own everything"].map(
                 (item) => (
                   <li key={item} className="flex items-center gap-2">
                     <CheckIcon className="h-4 w-4 text-teal-600" />
@@ -131,25 +130,6 @@ function HeroVisual() {
         <p className="text-[0.7rem] text-subtle">2 minutes ago</p>
       </div>
     </div>
-  );
-}
-
-function TrustStrip() {
-  return (
-    <section className="border-y border-line bg-surface py-10">
-      <div className="container-x">
-        <p className="text-center text-[0.78rem] font-semibold uppercase tracking-[0.18em] text-subtle">
-          Trusted by local businesses across the Triad
-        </p>
-        <ul className="mt-7 flex flex-wrap items-center justify-center gap-4 md:gap-7">
-          {["Logo 01", "Logo 02", "Logo 03", "Logo 04", "Logo 05"].map((label) => (
-            <li key={label}>
-              <ClientLogoPlaceholder label={label} />
-            </li>
-          ))}
-        </ul>
-      </div>
-    </section>
   );
 }
 
@@ -331,7 +311,6 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <TrustStrip />
       <ServicesPreview />
       <Process />
       <WorkPreview />

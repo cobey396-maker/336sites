@@ -1,7 +1,7 @@
 import { ButtonLink } from "@/components/Button";
 import { ArrowRightIcon, PhoneIcon } from "@/components/Icons";
 import { site } from "@/lib/site";
-import { Ornament } from "@/components/holiday/Decorations";
+import { ChristmasTree, Gingerbread, Ornament } from "@/components/holiday/Decorations";
 
 export function CTABand({
   title = "Ready for a site that actually earns its keep?",
@@ -13,7 +13,7 @@ export function CTABand({
   return (
     <section className="bg-background py-18 md:py-24">
       <div className="container-x">
-        <div className="relative overflow-hidden rounded-2xl bg-teal-900 px-7 py-14 text-center md:px-16 md:py-20">
+        <div className="relative overflow-hidden rounded-2xl bg-teal-900 px-7 py-14 pb-36 text-center md:px-16 md:py-20 md:pb-28 lg:pb-20">
           <div
             className="pointer-events-none absolute inset-0 opacity-[0.35] [background-image:linear-gradient(to_right,rgb(255_255_255/0.06)_1px,transparent_1px),linear-gradient(to_bottom,rgb(255_255_255/0.06)_1px,transparent_1px)] [background-size:72px_72px]"
             aria-hidden="true"
@@ -39,6 +39,12 @@ export function CTABand({
                 drop={54}
                 className="absolute right-[9%] top-0 h-24 w-6 origin-top md:right-[14%]"
               />
+            </div>
+          ) : null}
+          {site.holiday ? (
+            <div className="pointer-events-none absolute inset-x-0 bottom-0" aria-hidden="true">
+              <ChristmasTree className="absolute -bottom-1 left-3 h-32 w-auto md:left-8 md:h-44 lg:h-52" />
+              <Gingerbread className="absolute -bottom-1 right-4 h-24 w-auto md:right-10 md:h-32 lg:h-36" />
             </div>
           ) : null}
           <div className="relative mx-auto max-w-2xl">

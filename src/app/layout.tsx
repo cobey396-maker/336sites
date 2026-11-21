@@ -79,7 +79,7 @@ export default function RootLayout({
           // Static, developer-authored JSON-LD — no user input reaches this string.
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        {site.holiday ? <Snowfall /> : null}
+        {site.holiday ? <Snowfall density={95} /> : null}
         <Header />
         <main id="main">{children}</main>
         <Footer />

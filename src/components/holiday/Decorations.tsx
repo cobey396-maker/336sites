@@ -178,3 +178,84 @@ export function Snowflake({ className = "", ...rest }: SVGProps<SVGSVGElement>) 
     </svg>
   );
 }
+
+/** A lit, snow-dusted tree. Tiers have curved skirts so it is not three triangles. */
+export function ChristmasTree({ className = "" }: { className?: string }) {
+  const tiers = [
+    { d: "M60 18 L84 62 C74 68 66 63 60 68 C54 63 46 68 36 62 Z", snow: "M38 61 C47 66 54 63 60 66 C66 63 73 66 82 61" },
+    { d: "M60 46 L94 100 C80 107 70 100 60 106 C50 100 40 107 26 100 Z", snow: "M28 99 C41 105 51 99 60 103 C69 99 79 105 92 99" },
+    { d: "M60 78 L106 140 C88 148 73 140 60 146 C47 140 32 148 14 140 Z", snow: "M16 139 C33 146 48 139 60 144 C72 139 87 146 104 139" },
+  ];
+  const baubles = [
+    { cx: 60, cy: 54, r: 3.4, c: "var(--color-berry)" },
+    { cx: 46, cy: 86, r: 3.8, c: "var(--color-gold)" },
+    { cx: 76, cy: 92, r: 3.6, c: "var(--color-mint-400)" },
+    { cx: 38, cy: 124, r: 4, c: "var(--color-berry)" },
+    { cx: 60, cy: 118, r: 3.6, c: "var(--color-mint-400)" },
+    { cx: 84, cy: 128, r: 4, c: "var(--color-gold)" },
+  ];
+
+  return (
+    <svg viewBox="0 0 120 172" className={className} aria-hidden="true" focusable="false">
+      {/* snow mound the tree stands in */}
+      <ellipse cx="60" cy="166" rx="42" ry="6" fill="var(--color-snow)" opacity="0.18" />
+      <rect x="52" y="138" width="16" height="22" rx="3" fill="#6b4a2b" />
+
+      {tiers.map((t, i) => (
+        <g key={i}>
+          <path d={t.d} fill={i === 0 ? "var(--color-teal-500)" : i === 1 ? "var(--color-teal-600)" : "var(--color-teal-700)"} />
+          <path d={t.snow} fill="none" stroke="var(--color-snow)" strokeWidth="3.4" strokeLinecap="round" opacity="0.9" />
+        </g>
+      ))}
+
+      {baubles.map((b, i) => (
+        <circle key={i} cx={b.cx} cy={b.cy} r={b.r} fill={b.c} className="twinkle" style={{ animationDelay: `${i * 0.4}s` }} />
+      ))}
+
+      {/* star */}
+      <g className="twinkle">
+        <path
+          d="M60 0 L64.4 10.6 75.8 11.5 67.1 18.9 69.8 30 60 24 50.2 30 52.9 18.9 44.2 11.5 55.6 10.6 Z"
+          fill="var(--color-gold)"
+        />
+        <circle cx="60" cy="15" r="13" fill="var(--color-gold-glow)" opacity="0.18" />
+      </g>
+    </svg>
+  );
+}
+
+/** Gingerbread man with icing. Limbs are round-capped strokes, so he stays chunky. */
+export function Gingerbread({ className = "" }: { className?: string }) {
+  const dough = "#b9793c";
+  const icing = "var(--color-snow)";
+  return (
+    <svg viewBox="0 0 104 126" className={className} aria-hidden="true" focusable="false">
+      <g stroke={dough} strokeLinecap="round" fill="none">
+        <line x1="52" y1="52" x2="52" y2="84" strokeWidth="30" />
+        <line x1="24" y1="60" x2="80" y2="60" strokeWidth="17" />
+        <line x1="36" y1="108" x2="48" y2="84" strokeWidth="16" />
+        <line x1="68" y1="108" x2="56" y2="84" strokeWidth="16" />
+      </g>
+      <circle cx="52" cy="28" r="20" fill={dough} />
+
+      {/* icing */}
+      <g stroke={icing} strokeWidth="2.6" strokeLinecap="round" fill="none">
+        <path d="M27 67 l4-4 4 4 4-4" />
+        <path d="M69 67 l4-4 4 4 4-4" />
+        <path d="M31 106 l4-4 4 4 4-4" />
+        <path d="M61 106 l4-4 4 4 4-4" />
+        <path d="M40 46 q12 7 24 0" />
+      </g>
+
+      {/* face */}
+      <circle cx="45" cy="25" r="2.6" fill="#3b2412" />
+      <circle cx="59" cy="25" r="2.6" fill="#3b2412" />
+      <path d="M44 34 q8 6 16 0" stroke="#3b2412" strokeWidth="2.4" fill="none" strokeLinecap="round" />
+      <circle cx="52" cy="14" r="3.4" fill="var(--color-berry)" />
+
+      {/* buttons */}
+      <circle cx="52" cy="66" r="3.2" fill="var(--color-berry)" />
+      <circle cx="52" cy="78" r="3.2" fill="var(--color-mint-400)" />
+    </svg>
+  );
+}

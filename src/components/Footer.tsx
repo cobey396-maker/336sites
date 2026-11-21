@@ -10,7 +10,7 @@ import {
 } from "@/components/Icons";
 import { nav, site } from "@/lib/site";
 import { services } from "@/lib/content";
-import { HollySprig, SnowCap } from "@/components/holiday/Decorations";
+import { ChristmasTree, HollySprig, SnowCap } from "@/components/holiday/Decorations";
 
 const socials = [
   { href: site.social.instagram, label: "Instagram", Icon: InstagramIcon },
@@ -44,6 +44,9 @@ export function Footer() {
                 </li>
               ))}
             </ul>
+            {site.holiday ? (
+              <ChristmasTree className="mt-8 hidden h-32 w-auto lg:block" />
+            ) : null}
           </div>
 
           <nav aria-label="Footer">
