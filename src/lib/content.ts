@@ -105,6 +105,8 @@ export type Project = {
   image?: string;
   /** What the screenshot shows, for the alt text. */
   imageAlt?: string;
+  /** Live URL, when the site is published. */
+  url?: string;
 };
 
 /** Real clients. Add results here only once they are measured. */
@@ -119,7 +121,8 @@ export const projects: Project[] = [
     scope: ["Website design", "Quote builder", "Local SEO"],
     swatch: ["#084a44", "#34d3a9"],
     image: "/portfolio/larrys-lawn-care.webp",
-    imageAlt: "home page hero",
+    imageAlt: "home page",
+    url: "https://larrys-lawn-care.vercel.app",
   },
   {
     slug: "chris-cutz",
@@ -131,7 +134,8 @@ export const projects: Project[] = [
     scope: ["Website design", "Online booking", "Photo direction"],
     swatch: ["#042523", "#5be3bf"],
     image: "/portfolio/chris-cutz.webp",
-    imageAlt: "services and prices",
+    imageAlt: "home page",
+    url: "https://chris-cutz-six.vercel.app",
   },
   {
     slug: "peters-powerwashing",

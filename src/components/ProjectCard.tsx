@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ArrowRightIcon } from "@/components/Icons";
+import { ArrowRightIcon, ArrowUpRightIcon } from "@/components/Icons";
 import type { Project } from "@/lib/content";
 
 /**
@@ -79,6 +79,19 @@ export function ProjectCard({ project }: { project: Project }) {
             </li>
           ))}
         </ul>
+
+        {project.url ? (
+          <a
+            href={project.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-6 inline-flex min-h-11 w-fit items-center gap-1.5 text-[0.92rem] font-semibold text-teal-700 transition-colors duration-200 hover:text-teal-600"
+          >
+            Visit {project.name}
+            <ArrowUpRightIcon className="h-4 w-4" />
+            <span className="sr-only">(opens in a new tab)</span>
+          </a>
+        ) : null}
       </div>
     </article>
   );

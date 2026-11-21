@@ -78,6 +78,13 @@ export const ArrowRightIcon = (p: IconProps) => (
   </Base>
 );
 
+export const ArrowUpRightIcon = (p: IconProps) => (
+  <Base {...p}>
+    <path d="M7 17 17 7" />
+    <path d="M8.5 7H17v8.5" />
+  </Base>
+);
+
 export const PhoneIcon = (p: IconProps) => (
   <Base {...p}>
     <path d="M6.2 3.5h3l1.5 3.8-2 1.4a12.5 12.5 0 0 0 6.6 6.6l1.4-2 3.8 1.5v3a1.8 1.8 0 0 1-2 1.8A16.8 16.8 0 0 1 4.4 5.5a1.8 1.8 0 0 1 1.8-2Z" />
